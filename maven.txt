@@ -49,6 +49,32 @@ las dependencias
 las formas de testear
 estan en formato XML
 
+El archivo de proyecto se va ha llamar pom.xml
+
+para la creacion del componente hay que poner unos rasgos:
+
+groupid, atifactid, version
+
+el groupid es la empresa o instituto: edu.educacionit
+artifactid:Intrusos
+version:1
+name: Intrusos
+
+por ultimo, la estructura de carpetas es:
+
+src
+  main
+	java
+		(los paquetes)
+		edu.educacionit.Clase1
+	resources
+
+  test
+
+
+
+
+
 
 
 
