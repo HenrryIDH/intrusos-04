@@ -202,3 +202,44 @@ en una clase puede haber varios constructores conel mismo nombre y distintos num
 No puede devolver ningun valor ( incluyendo void).
 
 Normalmente es publico (salvo casos excepcionales) para que pueda ser invocado desde cualquier parte donde se desee crear un objeto de su clase.
+
+----------------------------------------------------------------------------------------
+ENCAPSULAMIENTO DE OBJETOS
+
+profe(clase pertenece a profesor)
+>>>>>><<<<<<<<<<<<
+interfaz(interface)medio zoom nos permite interectuar uno con el otro
+>>>>>>>>>>>>>>><<<<<<<<<<<
+estudiantes(obejto pertence alumno)
+
+-------------------------------------------------------------------------------------
+Que es MENU?
+
+es un objeto que lee un archivo de texto y presenta un menu. 
+
+--------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
