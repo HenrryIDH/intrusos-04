@@ -1,0 +1,204 @@
+compilacion en maven.
+
+Maven es una herramienta (build tool) de construccion de binarios.
+Al igual que javac convierte codigo fuente en binario. 
+Utiliza  javac.
+Tiene una estructura de carpetas particular impuesta por la herramienta.
+
+que es una libreira?
+	+ es un .zip o un .jar que es lo mismo. estan formadas de paquetes y clases compiladas.
+
+para que sirve?
+
+	+ para compilar codigo.
+	+ para manejar las dependencia.
+		que es una dependencia? 
+		--> existen cientos de miles de librerias hechas. libres para ser utilizadas.
+	+Dependencias Transitivas.
+		+ si Gmail utiliza la libreira de apache.commons.
+		+ y yo utilizo la libreria de apache.commons.
+		+ esta se descarga una sola vez.
+
+Donde van las dependencias?
+	
+	\User\nombreusuario(gomez-pineda pc\.m2\repository
+
+como se instala?
+
+https://maven.apache.org/download.cgi
+https://ftp.fau.de/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip
+luego unzipear con algun software grafico
+y guardar en un folder en c:\ folder opt
+C:\opt\apache-maven-3.6.3
+el comando para hacer el build es mvn. Dado que no va ha funcionar hay que agregar en las variables de entorno dos variables
+MAVEN_HOME (C:\opt\apache-maven-3.6.3)
+path %MAVEN_HOME%/bin
+[INFO] Scanning for projects...
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.102 s
+[INFO] Finished at: 2020-11-25T00:12:53+01:00
+
+este es el indicador que funciona!!!
+
+Archivo de proyecto? que Es?
+
+en el archivo de proyecto hay informacion de como se llama el componente
+las dependencias
+las formas de testear
+estan en formato XML
+
+El archivo de proyecto se va ha llamar pom.xml
+
+para la creacion del componente hay que poner unos rasgos:
+
+groupid, atifactid, version
+
+el groupid es la empresa o instituto: edu.educacionit
+artifactid:Intrusos
+version:1
+name: Intrusos
+
+por ultimo, la estructura de carpetas es:
+
+src
+  main
+	java
+		(los paquetes)
+		edu.educacionit.Clase1
+	resources
+
+  test
+
+-----------------------------------------------------------------------------
+Que es un constructor?
+
+UN constructo es un metodo perteneciente a la clase que posee una caracteristicas especiales.
+Se llama igual que la clase.
+No devuelve nada, ni siquiera VOID
+puede existir varios, pero siguiendo las reglas de la sobrecarga de funciones.
+De entre los que existan, tan solo uno se ejecutara al crea un objeto de la clase.
+
+8 tipos de datos primitivos:
+boolean, byte, char, short, int, long, float, double.
+
+El operador "new" que hace?
+
+el operador "new" crea una instancia de un objeto a partir de una clase.
+Dispara dos referencias ( las referencias son punteros)
+Direcciones de memoria.
+Generar una instancia de una clas es generar un espacio en memoria
+
+UN OBJETO NO TIENE NOMBRE> SOLO ESTA ALOCADO EN LA MEMORIA. Tiene una direccion en la memoria 
+
+operador new proporciona espacio de almacenamiento persistente. similar pero superio  a la funcion de Libreria estandar malloc (C#)
+Este operador permite crear un objeto de cualquier tipo, incluyendo tipos definidos por el usuario y devuelve un puntero(del tipo adecuado) al objeto creado.
+ LA UTILIZACION DEL NEW ::Su utilizacion exige que *****el usuario declarare un puntero del tipo adecuado***** Tipo y class es lo mismo.. 
+
+
+Starbucks es una clase por ejemploe
+
+//Gonzalo tiene un papelito con una direccion 
+//Andy tiene un  papelito con la misma direccion 
+ninguna de estos papelitos con esta direccion tiene alguna relacion con la clase starbucks.. Es solo una referencia para encontrar el objeto starbucks.
+
+LA otra instancia que es implicita que es THIS
+
+en todo los lugare que se coloque dentro del scope de los metodos de la clase.
+// dentro del starbucks dice" usted esta en la una direccion"=> THIS
+THIS es la direccion del propio objeto. Osea en este case de STARBUCKS.
+_____________________________________________________________________________________
+
+
+XML..
+
+Xml es el acronimo de Extensible MArkup Language, es decir, es un lenguaje de marcado que define un conjunto de reglas para la codificacion de documentos. El lenguaje de marcado que se pueden aplicar en el analisis de datos o la lectura de textos creados por computadoras o personas.
+
+El lenguaje xml porporciona una plataforma para definir elementos para crear un formato y generar un lenguaje personalizado.
+
+Libro, que decia: en los primeros 10 bytes va el numero de tarjeta
+en los segundos 2 bytes va el codigo de fecha
+en los terceros 4 bytes va la fecha de vencimiento.
+
+Se divide en dos partes PROLOG y BODY
+El diseño XML se centra en la simplicidad, la generalida y la facilida de uso y por lo tanto 
+es asi que hay sistemas destinados a ayudar en la definicion de lenguajes basados en xml
+
+--------------------------------------------------------------
+Operadores aritmeticos:		-- ++
+Operadores de asignacion: 	=
+relacionales:			== <= => !=
+logicos:			!a(boolean) si a es true !a es false (viceversa)
+ternarios Condicional:
+	String z = (a == true) ?(entonces) "A es true" :(de lo contrario/else) "A es false"
+precedencia y asociatividad de operadores
+				a = b + 1 * 5  precedencia es lo que se resuelve primero /,*,-+
+--------------------------------------------------------------------------------------------
+PALABRAS CLAVES:			
+
+abstract: se utiliza para definir clases y metodos abstractos.
+
+assert: sirve para afirmar que una condicion es cierta.
+
+break: instruccion de salto que interrumple(rompe) la ejecucion de un bucle o de una instruccion de control alternativa multiple (switch).
+
+catch: clausula de un bloque "try" donde se especifica un excepcion.
+
+continue: Instruccion de salto que interrumpe (rompe) la ejecucion de la interacion de un bucle. Pero , permitiendo continuar al bucle seguir realizando otras interaciones.
+
+enum: Sirve para definir tipos de datos enumerados.
+
+extends: clausula que permite indicar la clase padre de una clase.
+
+final: Permite indicar que una variable no se puede modificar, un metodo no se puede.
+finally: Clausula que permite especificar un bloque de codigo que siempre se ejecutara, se produzca o no una excepcion en un bloque "try".
+implements: Sirve para definir la o las interfaces de una clase.
+new: operador que se utiliza para crear un objeto nuevo de una clase.
+package: agrupa a un conjunto de clases.
+private: modificador de acceso para indicar que un elemento es accesible unicamente desde la clase donde se definido.
+protected: modificador de acceso para indicar que un elemento es accesible desde la clase.
+public: modificado de acceso para indicar que un elemento es accsible desde la clase.
+return: se usa para indicar el valor de retorno de un metodo.
+	ej: si yo prometo un string es obligatorio que yo haga un return de string
+
+	public String dameStr(){
+	 if (2 == 1 + 3){
+	  return "holiss";
+	 }else{
+	  return "chau";
+	 }
+	}
+	// significa que el retun "chau" compilara ya que el if es false y el else entraria 	//a mostrar el string.
+
+static: permite especificar que un elemneto es unico en una clase, no pudiendo existir 
+	instancias de esa clase que contengan a dicho elemento.
+	pertence a la clase.
+	si no es static pertence a los objetos.
+super: Permite invocar a un metodo o constructor de la superclase.
+
+this: Se utiliza para referenciar el objeto actual, asi como para invocar a un constructor 	de la clase a la que pertence dicho objeto.
+throw: Sirve para indicar las excepciones que un metodo puede lanzar.
+
+transient: sirve para especificar que un atributo no sea persistente.
+
+try: permite especificar un bloque de codigo donde se quieren atrapar excepciones.
+
+void: Tipo de dato vacio (sin valor). Solo se usa en metodos.
+-------------------------------------------------------------------------------------
+QUE ES UNA CLASE
+
+una clase es una plantilla que define la forma de un objeto. se instancia con new y los objetos son instancias de una clase.
+
+QUE ES UN CONSTRUCTOR
+
+es una subrutina cuya mision es inicializar un objeto de una clase.
+EN EL CONSTRUCTOR SE ASIGNAN LOS VALORES INICIALES DEL NUEVO OBJETO.
+
+constructor de una clase tiene las siguientes caracteristicas:
+tiene el mismo nombre de la clase a la que pertenece.
+en una clase puede haber varios constructores conel mismo nombre y distintos numero de argumentos (se puede sobrecargar)
+
+No puede devolver ningun valor ( incluyendo void).
+
+Normalmente es publico (salvo casos excepcionales) para que pueda ser invocado desde cualquier parte donde se desee crear un objeto de su clase.
