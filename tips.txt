@@ -218,7 +218,78 @@ Que es MENU?
 es un objeto que lee un archivo de texto y presenta un menu. 
 
 --------------------------------------------------------------------------------------
+Herencia determina una relacion de es UN
+imprimible{}
+	void imprimir();
+documento "es un" imprimible
 
+class Documento implements imprimible{
+	public void imprimir(){}
+}
+
+que significa que es UN
+
+imprimible i = new Documento();
+i.imprimir();
+
+Ustedes hicieron clases que implementa runnable y cuando seleccionan un item del menu
+
+Runnable r;
+r.run();
+
+Stopabble{
+	stop();
+}
+
+Mp3Player es un ReproductorDeMusica
+
+interface ReproductorMusica {
+	void reproducir();
+	void pausar();
+	void parar();
+
+}
+class Mp3Player implements ReproductorMusica {
+
+}
+-----------------------------------------------------------------------------------------
+Casteo Implicito es un polimorfismo.
+
+Que es POLIMOFIRSMO?
+
+--------------------------------------------------------------------------------------
+Que es un interface?
+sirve para aplicar el polimofirsmo.
+las interfaces son una forma de especificar que debe hacer una clase sin especificar el como. 
+las interfaces no son clases, solo especifican requerimientos para la clase que las implementa o, desde su uso. 
+--------------------------------------------------------------------------------------
+interfaz y clase abstracta:
+Todos los metodos de una interfaz se declaran implicitamente como abstractos y publicos.
+------------------------------------------------------------------------------------------
+que es la interfaz Runnable?
+es una interfaz que tiene un metodo void run();
+Es una interfaz que declara el metodo " public void run();"
+que tiene un metodo con aquella firma             "metodo"
+-----------------------------------------------------------------------------------------
+que es la herencia?
+
+Componer quiere decir que tenemos una instancia de una clase que contiene otras instancias "punteros" de otras clases que implentan las funciones deseadas.
+es deciar estamos "delegando" las " tareas" que nos mandan a hacer a aquella pieza de codigo que "sabe hacerlas"
+
+delega las tareas que nos mandan a hacer a aquellapieza de codigo que sabe hacerlas
+
+Compocision
+ quiere decir que tenemos una instancia de una clase que contiene instancias de otras clases que implementan las funciones deseadas.
+
+class Alumno{
+  string idAlumno;
+  Persona persona; 	
+}
+
+class Persona{
+  String nombre;
+  String Apelllido;
+}
 
 
 
